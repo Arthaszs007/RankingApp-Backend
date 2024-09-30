@@ -17,7 +17,7 @@ func Router() *gin.Engine {
 
 	// config the cors for crossing-origin resource sharing
 	r.Use(cors.New(cors.Config{
-		AllowOrigins:     []string{"http://localhost:5173", "http://192.168.1.134:5173", "https://ranking-app-frontend-sg8q.vercel.app"},
+		AllowOrigins:     []string{"http://localhost:5173", "http://192.168.1.134:5173", "https://ranking-app-frontend.vercel.app/"},
 		AllowMethods:     []string{"GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"},
 		AllowHeaders:     []string{"Origin", "Content-Type", "Authorization"},
 		AllowCredentials: true,
