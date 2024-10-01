@@ -23,7 +23,7 @@ func Router() *gin.Engine {
 		AllowCredentials: true,
 	}))
 	// config api
-	user := r.Group("/user")
+	user := r.Group("/api/user")
 	{
 		user.POST("/login", controllers.UserController{}.Login)
 
@@ -32,16 +32,16 @@ func Router() *gin.Engine {
 		user.GET("/verify", controllers.UserController{}.Verify)
 	}
 
-	event := r.Group("/event")
+	event := r.Group("/api/event")
 	{
 		event.GET("list", controllers.EventController{}.GetList)
 		event.POST("vote", controllers.EventController{}.VoteToMember)
 	}
-	rank := r.Group("/rank")
+	rank := r.Group("/api/rank")
 	{
 		rank.GET("/list", controllers.RankController{}.GetRank)
 	}
-	test := r.Group("/test")
+	test := r.Group("/api/test")
 	{
 		test.GET("1", controllers.RankController{}.GetRank)
 	}

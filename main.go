@@ -4,9 +4,12 @@ import (
 	"fmt"
 	"server/dao"
 	"server/router"
+
+	"github.com/gin-gonic/gin"
 )
 
 func main() {
+	gin.SetMode(gin.ReleaseMode)
 	r := router.Router()
 	// initi the gorm to connect the database
 	dao.Init()
