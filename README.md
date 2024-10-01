@@ -1,7 +1,7 @@
-go + gin + gorm + bcrypt + logrus + jwt+cors(midware) + uuid + redis + redisCloud
+# go + gin + gorm + bcrypt + logrus + jwt+cors(midware) + uuid + redis + redisCloud
 
 server:
-support client to check players info to vote and rank list. users register , login, logout and JWT
+support client to check players info to vote and rank list. users register , login, logout and JWT.
 
 framework: gin
 
